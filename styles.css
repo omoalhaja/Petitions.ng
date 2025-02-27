@@ -1,109 +1,38 @@
-/* General Styles */
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: 0.3s;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-:root {
-    --bg-color: white;
-    --text-color: black;
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
-.dark-mode {
-    --bg-color: #121212;
-    --text-color: white;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-}
-
-/* Dark/Light Mode Toggle */
-.toggle-container {
-    display: flex;
-    align-items: center;
-}
-
-#theme-toggle {
-    width: 40px;
-    height: 20px;
-    background: #ccc;
-    border-radius: 10px;
+.theme-toggle button {
+    background: none;
     border: none;
-    margin: 0 10px;
     cursor: pointer;
-    position: relative;
+    font-size: 1.5rem;
 }
 
-#theme-toggle::before {
-    content: "";
-    width: 18px;
-    height: 18px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 1px;
-    left: 2px;
-    transition: 0.3s;
-}
-
-.dark-mode #theme-toggle {
-    background: #555;
-}
-
-.dark-mode #theme-toggle::before {
-    left: 20px;
-}
-
-/* Search Section */
-.search {
-    padding: 20px;
-}
-
-/* Agency List */
-.agency-list {
+.agency-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
 }
 
-.agency {
+.agency-card {
     border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    background: #f8f8f8;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.agency:hover {
-    transform: scale(1.05);
-}
-
-.agency img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-}
-
-.agency a {
-    display: block;
-    margin-top: 5px;
-    color: blue;
-    text-decoration: none;
-}
-
-/* Petition Form */
-.petition-form {
-    margin-top: 20px;
     padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.agency-card:hover {
+    transform: scale(1.05);
 }
