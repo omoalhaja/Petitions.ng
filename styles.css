@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Search Section */
+.search {
+    padding: 20px;
+}
+
+/* Agency List */
+.agency-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.agency {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.agency img {
+    width: 50px;
+    height: 50px;
+}
+
+.agency a {
+    display: block;
+    margin-top: 5px;
+    color: blue;
+    text-decoration: none;
+}
+
+/* Petition Form */
+.petition-form {
+    margin-top: 20px;
+    padding: 20px;
+}
