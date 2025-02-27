@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetitionHub Nigeria</title>
+    <title>Petition Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>PetitionHub Nigeria</h1>
-        <div class="theme-toggle">
-            <button id="theme-toggle">🌙</button>
+        <h1>Petition Platform</h1>
+        <div class="toggle-container">
+            <span>🌞</span>
+            <button id="theme-toggle"></button>
+            <span>🌙</span>
         </div>
     </header>
+
     <main>
-        <section class="agency-grid">
-            <!-- Example Agency Card -->
-            <div class="agency-card" onclick="openAgency('police')">
-                <img src="police-logo.png" alt="Nigerian Police Logo">
-                <p>Nigerian Police</p>
-            </div>
-            <!-- Add more agencies dynamically -->
+        <section class="search">
+            <input type="text" id="agency-search" placeholder="Search Government Agency..." onkeyup="searchAgencies()">
+        </section>
+
+        <section class="agency-list" id="agency-list">
+            <!-- Agencies will be loaded here dynamically -->
+        </section>
+
+        <section class="petition-form">
+            <h2>Submit Your Petition</h2>
+            <input type="file" id="petition-file" accept=".pdf">
+            <button>Submit Petition</button>
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
